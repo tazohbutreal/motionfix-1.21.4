@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "motionfix",
+	"version": "${version}",
+	"name": "MotionFix",
+	"description": "lets you set entity motion above 10",
+	"authors": [
+		"tazoh!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/tazohbutreal/motionfix-1.21.4"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/motionfix/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"motionfix.MotionFix"
+		],
+		"client": [
+			"motionfix.MotionFixClient"
+		]
+	},
+	"mixins": [
+		"motionfix.mixins.json",
+		{
+			"config": "motionfix.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
